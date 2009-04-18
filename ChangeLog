@@ -1,0 +1,8 @@
+
+2009-04-18 Version 1.01 (cbrown)
+ - Fixed problems with DESCRIPTION that caused rejection from CRAN.
+ - Added ChangeLog
+
+2009-04-17 Version 1.0 (cbrown)
+ - First CRAN release
+
