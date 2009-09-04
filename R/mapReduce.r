@@ -8,53 +8,48 @@
 
 mapReduce <- function( map, ..., data=NULL, apply=sapply ) {
 
-    attach(data)   # Do we really want to attach this?
+    if( is.null(data) ) 
+      stop( "You must explicitly provide data using the data argument" ) 
 
-  # TRAP by parameter.  Find it in data if it is missing
-    if ( 
-      ! exists( as.character(substitute(map) ) ) 
-    ) {
-      map<-eval( substitute(map), data )
-    }              
+    m <- match.call( expand.dots=FALSE )
+    map <- eval( m$map, data )
 
-  # Convert into an expression
-  # The [-1] removes the 'c()' part of the call
-    expr = substitute( c( ... ) )[-1]
-
+  # The dots will be the expression that gets evaluated.
+    expr = m$`...`
 
   # Split data ... this is important since each of the features
   # will operate on the split data.  This is also the most time
   # consuming part of the process.
+  # because split is a poor function
     if( class(data) == "list" ) {
-        split.data <- data
+      split.data <- data
     } else {
-        split.data <- split( data, map )
+      split.data <- split( data, map )
     }
 
-  # innerFun: Evaluates and expression  an expression to 
+  # innerFun: Evaluates expression 
     innerFun = function( entity.data, expr ) {
         eval( expr, entity.data )
     }    
 
   # outerFun: Split data based on map  
     outerFun = function( expr, split.data ) {
-        sapply(
-            # split( data, map ) , 
-            split.data  ,
-            innerFun ,
-            expr
-        )
+      sapply(
+        # split( data, map ) , 
+        split.data  ,
+        innerFun ,
+        expr
+      )
     }
-
 
   # RETURN:
     ret=apply( 
-        expr ,  # Elimanates call
-        outerFun ,  # Contains inner function
-        split.data 
+      expr ,  # Elimanates call
+      outerFun ,  # Contains inner function
+      split.data 
     )
 
-    detach(data)
+    # detach(data)
     return(ret)
 }
 
