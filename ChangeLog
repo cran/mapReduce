@@ -1,3 +1,9 @@
+2011-03-02 Version 1.2.2
+ - R/zzz.R: added
+ - DESCRIPTION: 
+   - suggests testthat
+ - tests/test-all.R: added
+
 2011-03-02 (cbrown) Version 1.2.1 
  - Fixed version number to x.y.z
  - DESCRIPTION: fixed version number and contact information
