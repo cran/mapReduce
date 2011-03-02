@@ -18,8 +18,8 @@
 \tabular{ll}{
 Package: \tab mapReduce\cr
 Type: \tab Package\cr
-Version: \tab 1.02\cr
-Date: \tab 2009-09-04\cr
+Version: \tab 1.2.1\cr
+Date: \tab 2011-03-02\cr
 License: \tab LGPL (>=2 )\cr
 LazyLoad: \tab yes\cr
 }
@@ -30,22 +30,15 @@ All examples are in \code{\link{mapReduce}}
 \author{
 Christopher Brown
 
-Maintainer: Christopher Brown <cbrown -at- opendatagroup.com>
+Maintainer: Christopher Brown <cbrown -at- decisionpatterns.com>
 }
 
 \references{
 Dean and Gemawatt, (2004) MapReduce: Simplified Data Processing on Large Clusters. OSDI'04: Sixth Symposium on Operating System Design and Implementation.  
 
-also: http://labs.google.com/papers/mapreduce.html
-
-The Open Data Group at http://www.opendatagroup.com
+also: \url{http://labs.google.com/papers/mapreduce.html}
 
 }
 
 \keyword{ package }
 
-\seealso{
-}
-
-\examples{
-}

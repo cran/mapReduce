@@ -1,3 +1,11 @@
+2011-03-02 (cbrown) Version 1.2.1 
+ - Fixed version number to x.y.z
+ - DESCRIPTION: fixed version number and contact information
+ - man/mapReduce-package: fixed version number and contact information
+
+2009-10-09 (cbrown)
+ - Fixed documentation link reported by CRAN 
+
 2009-09-04 Version 1.02 (cbrown)
  - Removed dependence on attach.  Uses match.call instead.
 

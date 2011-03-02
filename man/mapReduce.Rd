@@ -98,11 +98,7 @@ The Open Data Group at http://www.opendatagroup.com
   \code{\link{apply}}, \code{\link{sapply}} - 
   \code{\link{by}}, \code{\link{aggregate}} ,
 
-  Parallelization Backends:
-    \code{\link[papply]{papply}}, 
-    \code{\link[multicore]{multicore}},
-    \code{\link[snow]{snow}}
-
+  Parallelization Backends: papply, multicore, snow.
 }
 
 
