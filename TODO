@@ -1,55 +1,58 @@
-## What if rather than splitting you apply a functions such as summarize or 
-# a dataframe ... with a functions
-# or ... say apply 
-# or simply eval
-# eval( x, 
+TODO:
 
+- Default of 'data' argument should be parent.frame() 
+    attach( iris )
+    mapReduce( Species, mean( Petal.Length ), ... )  
+  The problem is that the notion of environment or data.frame is lost.
+  Have to check that 
 
-# TODO:
-# - data should except a list that is already split.  Since working with
-#   data in this way is common
-# - Write method for extracting features from a featureList
-#   mapReduce( featureList, ... )
-#       Where ... are an unquoted list of strings
-#       returns a data frame if all features are vectors
-#   This seems to indicate that a package might be in order.
+- 'data' could be a data sructure that is already split.  It is very
+  common to work with data and not have to resplit it for each operation.
+  See e.g. split.frame. 
+  - Lazy evaluation 
 
-                                                   
-# - Support lists, functions, expressions and ...
-#       Probably how we want it to work is 
-# - Lazy evaluation
-#       The feature is not evaluated until it is needed.
-#       getFeature( feature_obj, ...names... ) 
-#       - If the features are there, returns the features
-#       - If the features are not evaluated, evals the features
-#         on the data 
-#   
-#       newFeatures( data, map, ...features... )
-#           slots for @data = split data
-#           map 
-#           features can be a list as well.
-#       
-#       acct_features( list ) : this could be a simple object that 
-#           returns a list or loads a list ...
-#           the features are also tied to the object
-#
-#       Just a collection of trxs:
-#           setMethod
-#
-#       The features should be evaluated on the features object not 
-#       will evaluate the features and save them in the feature object
-#           
-#   Entity$FeatureName
-#         
-#   
-f1<-function(data, ... ) {
+- Accept a featureList instead of ... 
+  Write method for extracting features from a featureList
+  mapReduce( map, featureList, ... )
+      Where ... are an unquoted list of strings
+      returns a data frame if all features are vectors
+  This seems to indicate that a package might be in order.
+    fl <- quote( length=mean(Petal.Length), width=mean(Petal.Width) )
+    mapReduce( Species, fl, data=iris )
 
-    print( substitute(...[]) )
+- For the reducer, support:
+  - lists: ??
+  - functions,
+  - expressions 
+  
 
-    innerFun = function( data, ... )
-        eval( ..., data )
-     
-    innerFun( data, substitute( c(...) ) ) 
-}
+- Lazy evaluation, 
+  return a promise, but not the result. This can be used to later
+  distribute the calculation.
+  The feature is not evaluated until it is needed.
+  getFeature( feature_obj, ...names... ) 
+    - If the features are there, returns the features
+    - If the features are not evaluated, evals the features
+      on the data 
+  
+- newFeatures( data, map, ...features... )
+    slots for @data = split data
+    map 
+    features can be a list as well.
+      
+- acct_features( list ) : this could be a simple object that 
+    returns a list or loads a list ...
+    the features are also tied to the object
 
-f1( test, min=min(amt), max=max(amt) )  
+# f1<-function(data, ... ) {
+# 
+#     print( substitute(...[]) )
+# 
+#     innerFun = function( data, ... )
+#         eval( ..., data )
+#      
+#     innerFun( data, substitute( c(...) ) ) 
+# }
+# 
+# f1( test, min=min(amt), max=max(amt) )  
+

@@ -1,10 +1,14 @@
+# ----------------------------------------------------------------------
 # Function: mapReduce
-#   mapReduce pattern implemented on an R data structure (array data.frame matrix) 
+#   mapReduce pattern implemented on an R data structure 
+#   (array data.frame matrix) 
+#
 # map: the map step evaluated on the data structure
 # ...: The Reduce step can be one or more functions with optional names 
 #      evaluated on the split data.  name=function.
 # data: the R data structure  
 # Returns a matrix or data.frame.
+# ----------------------------------------------------------------------
 
 mapReduce <- function( map, ..., data=NULL, apply=sapply ) {
 

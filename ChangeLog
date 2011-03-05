@@ -1,3 +1,9 @@
+2011-03-05 Version 1.2.3
+ - DESCRIPITION: Moved to GPLv2
+ - TODO: Updated
+ - LICENSE: Added
+ - R/zzz.R: Uses packageStartupMessage Now
+
 2011-03-02 Version 1.2.2
  - R/zzz.R: added
  - DESCRIPTION: 
