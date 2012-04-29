@@ -1,0 +1,10 @@
+48228a64aceeeda8461404f83f2dd3ad *ChangeLog
+951a34fdac6b24de964125929d1fdb80 *DESCRIPTION
+46b11aa21faa2ea81ba47eda491b5b6f *LICENSE
+df390c53434517b304ac5db487184641 *NAMESPACE
+aeb19f49db82d850e94e8d6ced5c6851 *R/mapReduce.r
+d40dda04325d23559e38c8e0af95ae53 *R/zzz.R
+36644a02bcf0e92046a861b50abd1a35 *TODO
+dc4b1db4ab72bde3e32223443838fedf *man/mapReduce-package.Rd
+02182489c18533b38fb19f409202ed95 *man/mapReduce.Rd
+0ebf4fbbe3c8f5b9df102c28672c3b29 *tests/test-all.R

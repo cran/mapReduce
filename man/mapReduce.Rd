@@ -82,11 +82,9 @@ Dean and Gemawatt, (2004) MapReduce: Simplified Data Processing on Large Cluster
 
 also: http://labs.google.com/papers/mapreduce.html
 
-The Open Data Group at http://www.opendatagroup.com
-
 }
 
-\author{ Christopher Brown <cbrown -at- opendatagroup.com> }
+\author{ Christopher Brown <cbrown -at- decisionpatterns.com> }
 
 \note{ 
   Special Thanks to Collin Bennett and Robert Grossman of Open Data

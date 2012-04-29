@@ -18,9 +18,9 @@
 \tabular{ll}{
 Package: \tab mapReduce\cr
 Type: \tab Package\cr
-Version: \tab 1.2.2\cr
-Date: \tab 2011-03-02\cr
-License: \tab LGPL (>=2 )\cr
+Version: \tab 1.2.5\cr
+Date: \tab 2012-04-29\cr
+License: \tab GPL (>=2 )\cr
 LazyLoad: \tab yes\cr
 }
 
@@ -30,7 +30,7 @@ All examples are in \code{\link{mapReduce}}
 \author{
 Christopher Brown
 
-Maintainer: Christopher Brown <cbrown -at- decisionpatterns.com>
+Maintainer: Christopher Brown <chris.brown@decisionpatterns.com>
 }
 
 \references{
