@@ -18,8 +18,8 @@
 \tabular{ll}{
 Package: \tab mapReduce\cr
 Type: \tab Package\cr
-Version: \tab 1.2.5\cr
-Date: \tab 2012-04-29\cr
+Version: \tab 1.2.6\cr
+Date: \tab 2012-06-24\cr
 License: \tab GPL (>=2 )\cr
 LazyLoad: \tab yes\cr
 }

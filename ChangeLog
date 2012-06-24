@@ -1,3 +1,6 @@
+2012-06-24 Version 1.2.6
+ - removed dependency on unsupported papply
+
 2011-03-05 Version 1.2.3
  - DESCRIPITION: Moved to GPLv2
  - man/mapReduce-Package.Rd: version number
